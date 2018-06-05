@@ -48,9 +48,9 @@ export class SpacexApiService {
       }
     }
     httpHeaders.append('Content-Type', 'application/json');
-    if(options && options.headers) {
+    if (options && options.headers) {
       for (const key in options.headers) {
-        if(options.headers.hasOwnProperty(key)){
+        if (options.headers.hasOwnProperty(key)) {
           httpHeaders.append(key, options.headers[key]);
         }
       }

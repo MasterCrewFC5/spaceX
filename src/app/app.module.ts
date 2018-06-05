@@ -8,6 +8,7 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { SpacexApiService } from './services/spacex-api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SpacexApiService } from './services/spacex-api.service';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MaterialModule
   ],
   providers: [SpacexApiService],
