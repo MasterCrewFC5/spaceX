@@ -7,6 +7,9 @@ import { MaterialModule } from './modules/material/material.module';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
+import { SpacexApiService } from './services/spacex-api.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [SpacexApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
