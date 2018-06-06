@@ -1,11 +1,23 @@
-<ul>
-  <li *ngFor="let launch of launchesUpcomning; let i = index">
-    {{launch.mission_name}} {{launch.mission_name}}
-  </li>
-</ul>
+<h2>List of upcoming launches</h2>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" *ngFor="let launch of launchesUpcomning; let i = index">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{launch.mission_name}}</h5>
+      <small>{{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}</small>
+    </div>
+    <p class="mb-1">Launch site : {{launch.launch_site.site_name_long}}</p>
+    <p class="mb-1">Rocket name : {{launch.rocket.rocket_name}}</p>
+  </a>
+</div>
 
-<ul>
-  <li *ngFor="let launch of launchesPast; let i = index">
-    {{launch.mission_name}} {{launch.mission_name}}
-  </li>
-</ul>
+<h2>List of past launches</h2>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" *ngFor="let launch of launchesPast; let i = index">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{launch.mission_name}}</h5>
+      <small>{{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}</small>
+    </div>
+    <p class="mb-1">Launch site : {{launch.launch_site.site_name_long}}</p>
+    <p class="mb-1">Rocket name : {{launch.rocket.rocket_name}}</p>
+  </a>
+</div>

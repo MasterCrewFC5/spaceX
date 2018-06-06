@@ -18,7 +18,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    LaunchesListComponent
+    LaunchesListComponent,
     TopbarComponent,
   ],
   imports: [
