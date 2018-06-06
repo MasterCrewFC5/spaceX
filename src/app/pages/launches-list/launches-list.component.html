@@ -1,23 +1,60 @@
-<h2>List of upcoming launches</h2>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" *ngFor="let launch of launchesUpcomning; let i = index">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{launch.mission_name}}</h5>
-      <small>{{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}</small>
-    </div>
-    <p class="mb-1">Launch site : {{launch.launch_site.site_name_long}}</p>
-    <p class="mb-1">Rocket name : {{launch.rocket.rocket_name}}</p>
-  </a>
-</div>
+<div class="container">
+  <h2>List of upcoming launches</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let launch of launchesUpcomning; let i = index">
+      <!--Card-->
+      <div class="card">
 
-<h2>List of past launches</h2>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" *ngFor="let launch of launchesPast; let i = index">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{launch.mission_name}}</h5>
-      <small>{{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}</small>
+        <!--Card image-->
+        <div class="view hm-white-slight waves-light" mdbWavesEffect>
+          <img ng-src="{{launch.links.mission_patch}}" class="img-fluid" alt="Card image with a tree in a middle of a lake.">
+          <a>
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{launch.mission_name}}</h4>
+          <!--Text-->
+          <p class="card-text">
+            Date : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}
+            Launch site : {{launch.launch_site.site_name_long}}
+            Rocket name : {{launch.rocket.rocket_name}}
+          </p>
+          <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+        </div>
+
+      </div>
     </div>
-    <p class="mb-1">Launch site : {{launch.launch_site.site_name_long}}</p>
-    <p class="mb-1">Rocket name : {{launch.rocket.rocket_name}}</p>
-  </a>
+  </div>
+  <h2>List of past launches</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let launch of launchesPast; let i = index">
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view hm-white-slight waves-light" mdbWavesEffect>
+          <img ng-src="{{launch.links.mission_patch}}" class="img-fluid" alt="Card image with a tree in a middle of a lake.">
+          <a>
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{launch.mission_name}}</h4>
+          <!--Text-->
+          <p class="card-text">
+            Date : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}}
+            Launch site : {{launch.launch_site.site_name_long}}
+            Rocket name : {{launch.rocket.rocket_name}}</p>
+          <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
