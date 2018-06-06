@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { SpacexApiService } from './services/spacex-api.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LaunchesListComponent } from './components/launches-list/launches-list.component';
+import { LaunchesListComponent } from './pages/launches-list/launches-list.component';
 
 @NgModule({
   declarations: [
