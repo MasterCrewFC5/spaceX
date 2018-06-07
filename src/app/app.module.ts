@@ -16,6 +16,8 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CapsulesComponent } from './pages/capsules/capsules.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { GmapsComponent } from './components/gmaps/gmaps.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     TopbarComponent,
     FooterComponent,
     CapsulesComponent,
+    GmapsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -35,7 +38,10 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     MaterialModule,
     MatToolbarModule,
     MDBBootstrapModule,
-    NgHttpLoaderModule
+    NgHttpLoaderModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
+    })
   ],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
