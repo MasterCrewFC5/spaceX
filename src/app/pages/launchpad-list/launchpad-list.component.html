@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 col-xs-12">
+    <!--Card Primary-->
+    <div class="card text-center z-depth-2 elegant-color-dark"
+         *ngFor="let launchpad of launchpads; let i = index"
+         ng-class-even="'elegant-color-dark'"
+         ng-class-odd="'elegant-color'">
+      <div class="card-body">
+        <p class="white-text mb-0">{{launchpad.full_name}}</p>
+        <p class="white-text mb-0">{{launchpad.location.region}}</p>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+  </div>
+</div>
