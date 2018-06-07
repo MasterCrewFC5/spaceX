@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GmapsComponent } from './components/gmaps/gmaps.component';
 import { AgmCoreModule } from '@agm/core';
 import {CompanyComponent} from './pages/company/company.component';
+import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {CompanyComponent} from './pages/company/company.component';
     FooterComponent,
     GmapsComponent,
     CompanyComponent,
+    LaunchpadListComponent,
   ],
   imports: [
     AppRoutingModule,
