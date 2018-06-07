@@ -12,12 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { GmapsComponent } from './components/gmaps/gmaps.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopbarComponent,
+    GmapsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -27,7 +31,10 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     HttpClientModule,
     MaterialModule,
     MatToolbarModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
+    })
   ],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
