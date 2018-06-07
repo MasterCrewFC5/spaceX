@@ -15,6 +15,8 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { RocketsComponent } from './pages/rockets/rockets.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CapsulesComponent } from './pages/capsules/capsules.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 import { GmapsComponent } from './components/gmaps/gmaps.component';
 import { AgmCoreModule } from '@agm/core';
 import {CompanyComponent} from './pages/company/company.component';
@@ -28,6 +30,7 @@ import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.comp
     TopbarComponent,
     RocketsComponent,
     FooterComponent,
+    CapsulesComponent,
     GmapsComponent,
     CompanyComponent,
     LaunchpadListComponent,
@@ -41,6 +44,7 @@ import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.comp
     MaterialModule,
     MatToolbarModule,
     MDBBootstrapModule,
+    NgHttpLoaderModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
     })

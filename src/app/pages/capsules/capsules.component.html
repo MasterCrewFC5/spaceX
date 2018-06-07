@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>List of capsules</h2>
+  <br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let capsule of Capsules; let i = index">
+        <!--Card-->
+        <div class="card">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{capsule.name}}</h4>
+            <!--Text-->
+            <p class="card-text">
+              <span class="bold">Crew capacity </span>  : {{capsule.crew_capacity }} members <br>
+              <span class="bold">Mass </span> : {{capsule.launch_payload_mass.kg}} kg <br>
+              <span class="bold">Volume </span> : {{capsule.launch_payload_vol.cubic_meters}} m3
+            </p>
+            <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
