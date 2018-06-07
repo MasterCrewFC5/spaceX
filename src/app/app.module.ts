@@ -12,12 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LaunchesComponent } from './pages/launches/launches.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopbarComponent,
+    FooterComponent,
+    LaunchesComponent,
   ],
   imports: [
     AppRoutingModule,
