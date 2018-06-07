@@ -21,7 +21,7 @@ export class LaunchpadListComponent implements OnInit {
   }
 
   getLaunchpads() {
-    this.LaunchpadService.fetchAllLaunchpads().toPromise().then(
+    this.launchpadService.fetchAllLaunchpads().toPromise().then(
       (result) => {
         console.log(result);
         this.launchpads = result;
