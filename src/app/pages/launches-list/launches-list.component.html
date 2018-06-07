@@ -1,0 +1,59 @@
+<div class="container">
+  <h2>List of upcoming launches</h2>
+  <br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let launch of launchesUpcomning; let i = index">
+        <!--Card-->
+        <div class="card">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{launch.mission_name}}</h4>
+            <!--Text-->
+            <p class="card-text">
+              <span class="bold">Date </span>  : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
+              <span class="bold">Launch site </span> : {{launch.launch_site.site_name_long}} <br>
+              <span class="bold">Rocket name </span> : {{launch.rocket.rocket_name}}
+            </p>
+            <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>List of past launches</h2>
+  <br>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let launch of launchesPast; let i = index">
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view hm-white-slight waves-light" mdbWavesEffect>
+          <img [src]="launch.links.mission_patch" class="img-fluid" alt="Card image with a tree in a middle of a lake.">
+          <a>
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{launch.mission_name}}</h4>
+
+          <!--Text-->
+          <p class="card-text">
+            <span class="bold">Date </span> : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
+            <span class="bold">Launch site </span> : {{launch.launch_site.site_name_long}} <br>
+            <span class="bold">Rocket name </span> : {{launch.rocket.rocket_name}}</p>
+          <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

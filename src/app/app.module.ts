@@ -9,17 +9,24 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { SpacexApiService } from './services/spacex-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LaunchesListComponent } from './pages/launches-list/launches-list.component';
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { RocketsComponent } from './components/rockets/rockets.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GmapsComponent } from './components/gmaps/gmaps.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    LaunchesListComponent,
     TopbarComponent,
     RocketsComponent,
+    FooterComponent,
+    GmapsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -29,7 +36,10 @@ import { RocketsComponent } from './components/rockets/rockets.component';
     HttpClientModule,
     MaterialModule,
     MatToolbarModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
+    })
   ],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
