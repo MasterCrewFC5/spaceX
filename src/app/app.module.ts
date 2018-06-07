@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GmapsComponent } from './components/gmaps/gmaps.component';
 import { AgmCoreModule } from '@agm/core';
 import {CompanyComponent} from './pages/company/company.component';
+import {CountdownTimerModule} from 'ngx-countdown-timer';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {CompanyComponent} from './pages/company/company.component';
     MDBBootstrapModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
-    })
+    }),
+    CountdownTimerModule.forRoot()
   ],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
