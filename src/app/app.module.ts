@@ -12,11 +12,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {LaunchesListComponent} from './pages/launches-list/launches-list.component';
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
-import {TopbarComponent} from './components/topbar/topbar.component';
-import {FooterComponent} from './components/footer/footer.component';
-import {GmapsComponent} from './components/gmaps/gmaps.component';
-import {CompanyComponent} from './components/company/company.component';
-import {AgmCoreModule} from '@agm/core';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { RocketsComponent } from './pages/rockets/rockets.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GmapsComponent } from './components/gmaps/gmaps.component';
+import { AgmCoreModule } from '@agm/core';
+import {CompanyComponent} from './pages/company/company.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {AgmCoreModule} from '@agm/core';
     HomeComponent,
     LaunchesListComponent,
     TopbarComponent,
+    RocketsComponent,
     FooterComponent,
     GmapsComponent,
     CompanyComponent,
