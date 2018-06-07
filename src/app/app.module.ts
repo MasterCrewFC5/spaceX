@@ -12,12 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { RocketsComponent } from './components/rockets/rockets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopbarComponent,
+    RocketsComponent,
   ],
   imports: [
     AppRoutingModule,
