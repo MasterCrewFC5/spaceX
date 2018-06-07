@@ -13,6 +13,7 @@ import { LaunchesListComponent } from './pages/launches-list/launches-list.compo
 import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { RocketsComponent } from './pages/rockets/rockets.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GmapsComponent } from './components/gmaps/gmaps.component';
 import { AgmCoreModule } from '@agm/core';
@@ -23,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     HomeComponent,
     LaunchesListComponent,
     TopbarComponent,
+    RocketsComponent,
     FooterComponent,
     GmapsComponent,
   ],
