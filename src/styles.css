@@ -7,4 +7,10 @@ body, html {
 .content {
   padding-top: 100px; }
 
+.card {
+  margin-bottom: 20px; }
+
+.bold {
+  font-weight: bold; }
+
 /*# sourceMappingURL=styles.css.map */
