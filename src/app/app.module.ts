@@ -14,6 +14,8 @@ import {MatToolbarModule} from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CapsulesComponent } from './pages/capsules/capsules.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     LaunchesListComponent,
     TopbarComponent,
     FooterComponent,
+    CapsulesComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -31,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     MaterialModule,
     MatToolbarModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    NgHttpLoaderModule
   ],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
