@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>List of all rockets</h2>
+  <br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let rocket of rockets; let i = index">
+        <!--Card-->
+        <div class="card">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{rocket.name}}</h4>
+            <!--Text-->
+            <p class="card-text">
+              <span class="bold">First flight </span>  : {{rocket.first_flight | date:"MM/dd/yyyy"}} <br>
+              <span class="bold">Stage number </span> : {{rocket.stages}} <br>
+              <span class="bold">Height </span> : {{rocket.height.meters}} meters <br>
+              <span class="bold">Diameter </span> : {{rocket.diameter.meters}} meters<br>
+              <span class="bold">Mass </span> : {{rocket.mass.kg}} kg<br>
+              <span class="bold">Description </span> : {{rocket.description}} <br>
+            </p>
+            <!--<a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
