@@ -1,0 +1,24 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="closeDialog()">
+        <span aria-hidden="true">×</span>
+      </button>
+      <h4 class="modal-title w-100" id="myModalLabel">{{ data.full_name }}</h4>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li><strong>Vehicle launched : </strong>{{ data.vehicles_launched }}</li>
+        <hr>
+        <li><strong>Description : </strong>{{ data.details }}</li>
+      </ul>
+      <hr>
+      <app-gmaps [lat]="data.location.latitude" [lng]="data.location.longitude"></app-gmaps>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn waves-light backBtn" aria-label="Back" (click)="closeDialog()"
+              mdbWavesEffect>Back
+      </button>
+    </div>
+  </div>
+</div>

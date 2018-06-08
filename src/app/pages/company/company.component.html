@@ -12,7 +12,8 @@
 
     <!-- Grid column -->
     <div class="col-lg-5 text-center text-lg-left">
-      <img  class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
+      <img class="img-fluid b-shadow" src="http://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/39a_02_poidx-cape-120816-bi0i1513.jpg?itok=e3GqzkHp"
+           alt="Sample image">
     </div>
     <!-- Grid column -->
 
@@ -51,7 +52,7 @@
         <div class="col-xl-10 col-md-11 col-10">
           <h5 class="font-weight-bold mb-3">Employees</h5>
           <p class="grey-text">
-            {{company.employees}}
+            {{company.employees.toLocaleString()}}
           </p>
         </div>
         <!-- Grid column -->
@@ -60,7 +61,7 @@
       <!-- Grid row -->
 
       <!--Grid row-->
-      <div class="row">
+      <div class="row mb-3">
 
         <!-- Grid column -->
         <div class="col-1">
@@ -72,22 +73,24 @@
         <div class="col-xl-10 col-md-11 col-10">
           <h5 class="font-weight-bold mb-3">Address</h5>
           <p class="grey-text mb-0">
-            {{company.address}} {{company.city}} {{company.state}}</p>
+            {{company.headquarters.address}} {{company.headquarters.city}}
+            {{company.headquarters.state}}</p>
         </div>
-        <!-- Grid column -->
+      </div>
 
+      <!--Grid row-->
+      <div class="row mb-3">
+        <div class="col-1">
+          <i class="fa fa-mail-forward fa-lg indigo-text"></i>
+        </div>
 
         <!-- Grid column -->
         <div class="col-xl-10 col-md-11 col-10">
           <h5 class="font-weight-bold mb-3">Valuation</h5>
           <p class="grey-text mb-0">
-            {{company.valuation}}</p>
+            {{company.valuation.toLocaleString()}}</p>
         </div>
-        <!-- Grid column -->
-
       </div>
-      <!--Grid row-->
-
     </div>
     <!--Grid column-->
 

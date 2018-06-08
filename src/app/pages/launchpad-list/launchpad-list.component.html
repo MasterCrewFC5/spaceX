@@ -1,0 +1,25 @@
+<div class="row launchpad-page marginTop">
+  <div class="col-lg-4 col-md-12" *ngFor="let launchpad of launchpads; let i = index">
+    <!--Card Primary-->
+    <div class="justify card text-center z-depth-2 mdb-color darken-4"
+
+         ng-class-even="'elegant-color-dark'"
+         ng-class-odd="'elegant-color'">
+      <div class="card-body">
+        <h2 class="h2-responsive whiteColor">{{launchpad.location.region}}</h2>
+        <hr class="whiteColor">
+        <p class="whiteColor" *ngIf="launchpad.status === 'active'">Status : <i class="fa fa-check"></i>
+        <p class="whiteColor" *ngIf="launchpad.status == 'retired'">Status : <i class="fa fa-close"></i>
+        <p class="whiteColor" *ngIf="launchpad.status == 'under construction'">Status : <i class="fa fa-wrench"></i>
+        </p>
+        <p class="whiteColor">{{launchpad.full_name}}</p>
+        <a class="white-text mt-1 d-flex flex-row-reverse" (click)="openDialog(launchpad.id)">
+          <h5 class="waves-effect p-2">Read more
+            <i class="fa fa-chevron-right"></i>
+          </h5>
+        </a>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+  </div>
+</div>
