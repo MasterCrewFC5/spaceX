@@ -1,2 +1,5 @@
-Countdown:
-<countdown-timer [end]="'2019-01-01 00:00:00'"></countdown-timer>
+<span class="bold"> Next launch </span>:
+<countdown-timer [end]="nextLaunch.launch_date_utc | date:'yyyy-MM-dd hh:mm:ss'"></countdown-timer> <br>
+<span class="bold">Date </span> : {{nextLaunch.launch_date_utc | date:"MM/dd/yyyy 'at' h:mma"}} <br>
+<span class="bold">Launch site </span> : {{nextLaunch.launch_site.site_name_long}} <br>
+<span class="bold">Rocket name </span> : {{nextLaunch.rocket.rocket_name}} <br>
