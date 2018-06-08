@@ -11,7 +11,7 @@ import {SpacexApiService} from './services/spacex-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import {LaunchesListComponent} from './pages/launches-list/launches-list.component';
 import {MatToolbarModule} from '@angular/material';
-import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import { MDBBootstrapModule, ModalModule } from 'angular-bootstrap-md';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { RocketsComponent } from './pages/rockets/rockets.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,6 +21,8 @@ import { GmapsComponent } from './components/gmaps/gmaps.component';
 import { AgmCoreModule } from '@agm/core';
 import {CompanyComponent} from './pages/company/company.component';
 import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.component';
+import { DetailLaunchpadDialogComponent } from './components/detail-launchpad-dialog/detail-launchpad-dialog.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.comp
     GmapsComponent,
     CompanyComponent,
     LaunchpadListComponent,
+    DetailLaunchpadDialogComponent,
+    JwPaginationComponent
   ],
   imports: [
     AppRoutingModule,
@@ -42,6 +46,7 @@ import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.comp
     FormsModule,
     HttpClientModule,
     MaterialModule,
+    ModalModule.forRoot(),
     MatToolbarModule,
     MDBBootstrapModule,
     NgHttpLoaderModule,
@@ -49,6 +54,7 @@ import {LaunchpadListComponent} from './pages/launchpad-list/launchpad-list.comp
       apiKey: 'AIzaSyAziFR-NOwLCLmdvFbmTjMzd0Fg-RR0NSw'
     })
   ],
+  entryComponents: [DetailLaunchpadDialogComponent],
   providers: [SpacexApiService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]

@@ -12,6 +12,9 @@ export class LaunchesListComponent implements OnInit {
   launchesUpcomning: any = [];
   launchesPast: any = [];
 
+  items: Array<any>;
+  pageOfItems: Array<any>;
+
   error = '';
 
   constructor(private launchService: LaunchService) { }
@@ -19,6 +22,11 @@ export class LaunchesListComponent implements OnInit {
   ngOnInit() {
     this.getUpcomingLaunchesList();
     this.getPastLaunchesList();
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
   }
 
   getUpcomingLaunchesList() {
@@ -39,6 +47,7 @@ export class LaunchesListComponent implements OnInit {
       (result) => {
         console.log(result);
         this.launchesPast = result;
+        this.items = result;
       }
     ).catch(
       (er) => {
