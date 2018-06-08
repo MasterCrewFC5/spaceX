@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {LaunchService} from '../../services/launch/launch.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,26 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  nextLaunch: any = [];
+  error = '';
+
+  constructor(private launchService: LaunchService) { }
 
   ngOnInit() {
+    this.getNextLaunch();
+  }
+
+  getNextLaunch(){
+    this.launchService.fetchNextLaunch().toPromise().then(
+      (result) => {
+        console.log(result);
+        this.nextLaunch = result;
+      }
+    ).catch(
+      (er) => {
+        this.error = er;
+      }
+    );
   }
 
 }

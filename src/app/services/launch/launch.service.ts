@@ -30,4 +30,8 @@ export class LaunchService {
   fetchFilteredLaunches(params: LaunchFilters): Observable<Launch[]> {
     return this.appService.get('launches', { params });
   }
+
+  fetchNextLaunch(): Observable<Launch[]> {
+    return this.appService.get('launches/next');
+  }
 }
