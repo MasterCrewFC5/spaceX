@@ -27,6 +27,42 @@ body,html{
   line-height: 1;
   width: 100%; // Add this
 }
+
 .b-shadow{
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+
+.cdk-global-overlay-wrapper{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 0px;
+  z-index: 10000000;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-dialog{
+  max-width: 70%;
+}
+.elegant-color-dark, .modal-header{
+  background: url("assets/test.jpg") !important;
+}
+.launchpad-page{
+  background: url("assets/launchpad.jpg") no-repeat center fixed !important;
+}
+.whiteColor{
+  color: white;
+}
+.justify{
+  display: flex;
+  flex-direction: row;
+}
+.darken-4, .modal-header, .backBtn, .btn-secondary{
+  background-color: #02273a !important;
+}
+.modal-header, .backBtn{
+  color: white;
+}
+hr.whiteColor{
+  border: 1px solid rgba(0,0,0,0.5);
 }

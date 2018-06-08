@@ -4,7 +4,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4" *ngFor="let launch of launchesUpcomning; let i = index">
+      <div class="col-md-6" *ngFor="let launch of launchesUpcomning; let i = index">
         <!--Card-->
         <div class="card">
 
@@ -29,7 +29,7 @@
   <h2>List of past launches</h2>
   <br>
   <div class="row">
-    <div class="col-md-4" *ngFor="let launch of launchesPast; let i = index">
+    <div class="col-md-4" *ngFor="let launch of pageOfItems; let i = index">
       <!--Card-->
       <div class="card">
 
@@ -46,8 +46,13 @@
           <!--Title-->
           <h4 class="card-title">{{launch.mission_name}}</h4>
 
+
           <!--Text-->
           <p class="card-text">
+            <span *ngIf="launch.launch_success"><span class="bold">Success </span> : <i class="fa fa-check"></i> <br></span>
+            <span *ngIf="!launch.launch_success"><span class="bold">Success </span> : <i class="fa fa-close"></i> <br></span>
+            <span *ngIf="launch.core_reuse"><span class="bold">Core reuse </span> : <i class="fa fa-check"></i> <br></span>
+            <span *ngIf="!launch.core_reuse"><span class="bold">Core reuse </span> : <i class="fa fa-close"></i> <br></span>
             <span class="bold">Date </span> : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
             <span class="bold">Launch site </span> : {{launch.launch_site.site_name_long}} <br>
             <span class="bold">Rocket name </span> : {{launch.rocket.rocket_name}}</p>
@@ -55,5 +60,6 @@
         </div>
       </div>
     </div>
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
   </div>
 </div>
