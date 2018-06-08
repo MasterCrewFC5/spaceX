@@ -57,10 +57,10 @@ hr.whiteColor{
   border: 1px solid rgba(255,255,255,1);
 }
 .marginTop{
-  padding-top: 8%;
+  margin-top: 8%;
 }
 .marginTopBis{
-  padding-top: 15%;
+  margin-top: 15%;
 }
 .margin{
   margin-right: 5%;
@@ -68,4 +68,23 @@ hr.whiteColor{
 }
 .b-shadow {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.pagination li{
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 1px 7px;
+}
+.pagination li.active{
+  color: white;
+  background-color: #444444;
+  border-radius: 10%;
+}
+.pagination li:hover{
+  color: white;
+  background-color: #666666;
+  border-radius: 10%;
+}
+ul{
+  list-style: none ;
 }

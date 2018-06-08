@@ -14,7 +14,7 @@
             <h4 class="card-title">{{launch.mission_name}}</h4>
             <!--Text-->
             <p class="card-text">
-              <span class="bold">Date </span>  : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
+              <span class="bold">Date </span> : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
               <span class="bold">Launch site </span> : {{launch.launch_site.site_name_long}} <br>
               <span class="bold">Rocket name </span> : {{launch.rocket.rocket_name}}
             </p>
@@ -49,10 +49,27 @@
 
           <!--Text-->
           <p class="card-text">
-            <span *ngIf="launch.launch_success"><span class="bold">Success </span> : <i class="fa fa-check"></i> <br></span>
-            <span *ngIf="!launch.launch_success"><span class="bold">Success </span> : <i class="fa fa-close"></i> <br></span>
-            <span *ngIf="launch.core_reuse"><span class="bold">Core reuse </span> : <i class="fa fa-check"></i> <br></span>
-            <span *ngIf="!launch.core_reuse"><span class="bold">Core reuse </span> : <i class="fa fa-close"></i> <br></span>
+            <span *ngIf="launch.launch_success">
+              <span class="btn-sm btn-success">
+                <i class="fa fa-check"> </i> &nbsp; <span>Launch </span> </span> <br>
+            </span>
+            <span *ngIf="!launch.launch_success">
+              <span class="btn-sm btn-danger">
+                <i class="fa fa-close"> </i>  &nbsp; <span>Launch </span> </span>  <br>
+            </span>
+
+            <br>
+
+            <span *ngIf="launch.core_reuse">
+              <span class="btn-sm btn-success">
+                <i class="fa fa-check"> </i> &nbsp; <span> Core reuse </span> </span> <br>
+            </span>
+            <span *ngIf="!launch.core_reuse">
+              <span class="btn-sm btn-danger">
+                <i class="fa fa-close"> </i>  &nbsp; <span> Core reuse </span> </span>  <br>
+            </span>
+            <br>
+
             <span class="bold">Date </span> : {{launch.launch_date_unix | date:"MM/dd/yyyy 'at' h:mma"}} <br>
             <span class="bold">Launch site </span> : {{launch.launch_site.site_name_long}} <br>
             <span class="bold">Rocket name </span> : {{launch.rocket.rocket_name}}</p>
@@ -60,6 +77,10 @@
         </div>
       </div>
     </div>
-    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+
+    <div class="container-fluid flex-center">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+
   </div>
 </div>
