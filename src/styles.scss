@@ -1,76 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
-body,html{
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  min-height: 700px;
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 700px;
 }
 
-.card{
-  margin-bottom: 20px;
-}
-.bold{
-  font-weight: bold;
+.card {
+    margin-bottom: 20px;
 }
 
-.router-div{
-  min-height:400px;
+.bold {
+    font-weight: bold;
 }
 
-.carousel-inner img{
-  display: block;
-  height: auto;
-  max-width: 100%;
-  line-height: 1;
-  width: 100%; // Add this
+.router-div {
+    min-height: 400px;
 }
 
-.b-shadow{
+.carousel-inner img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    width: 100%; // Add this
+}
+
+.b-shadow {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 
-.cdk-global-overlay-wrapper{
-  position: absolute;
-  left: 0%;
-  width: 100%;
-  top: 0px;
-  z-index: 10000000;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-}
+    .cdk-global-overlay-wrapper {
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        top: 0px;
+        z-index: 10000000;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
 
-.modal-dialog{
-  max-width: 70%;
-}
-.elegant-color-dark, .modal-header{
-  background: url("assets/test.jpg") !important;
-}
-.launchpad-page{
-  background: url("assets/launchpad.jpg") no-repeat center;
-  background-size: cover;
-}
-.whiteColor{
-  color: white;
-}
-.justify{
-  display: flex;
-  flex-direction: row;
-}
-.darken-4, .modal-header, .backBtn, .btn-secondary{
-  background-color: #02273a !important;
-}
-.modal-header, .backBtn{
-  color: white;
-}
-hr.whiteColor{
-  border: 1px solid rgba(255,255,255,1);
-}
-.marginTop{
-  padding-top: 8%;
-}
-.marginTopBis{
-  padding-top: 15%;
-}
-.margin{
-  margin-right: 5%;
-  margin-left: 5%;
+    .modal-dialog {
+        max-width: 70%;
+    }
+    .elegant-color-dark, .modal-header {
+        background: url("assets/test.jpg") !important;
+    }
+    .launchpad-page {
+        background: url("assets/launchpad.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .whiteColor {
+        color: white;
+    }
+    .justify {
+        display: flex;
+        flex-direction: row;
+    }
+    .darken-4, .modal-header, .backBtn, .btn-secondary {
+        background-color: #02273a !important;
+    }
+    .modal-header, .backBtn {
+        color: white;
+    }
+    hr.whiteColor {
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+    .marginTop {
+        padding-top: 8%;
+    }
+    .marginTopBis {
+        padding-top: 15%;
+    }
+    .margin {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 }
