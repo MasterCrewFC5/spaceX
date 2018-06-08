@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,aAAa;EACX,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAC,EAAE;EACP,KAAK,EAAE,EAAE;;AAEX,YAAY;EACV,UAAU,EAAE,MAAM;;AAEpB,aAAa;EACX,eAAe,EAAE,MAAM;;AAEzB,cAAc;EACZ,gBAAgB,EAAE,kBAAkB;;AAEtC,MAAM;EACJ,KAAK,EAAE,kBAAkB",
-"sources": ["detail-launchpad-dialog.component.scss"],
-"names": [],
-"file": "detail-launchpad-dialog.component.css"
-}
