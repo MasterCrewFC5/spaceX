@@ -5,9 +5,6 @@ body,html{
   width: 100%;
   min-height: 700px;
 }
-.content{
-  padding-top: 100px;
-}
 
 .card{
   margin-bottom: 20px;
@@ -44,7 +41,8 @@ body,html{
   background: url("assets/test.jpg") !important;
 }
 .launchpad-page{
-  background: url("assets/launchpad.jpg") no-repeat center fixed !important;
+  background: url("assets/launchpad.jpg") no-repeat center;
+  background-size: cover;
 }
 .whiteColor{
   color: white;
@@ -60,5 +58,15 @@ body,html{
   color: white;
 }
 hr.whiteColor{
-  border: 1px solid rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,1);
+}
+.marginTop{
+  padding-top: 8%;
+}
+.marginTopBis{
+  padding-top: 15%;
+}
+.margin{
+  margin-right: 5%;
+  margin-left: 5%;
 }
